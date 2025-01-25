@@ -1,0 +1,166 @@
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+/* Conteneur principal */
+.app-container {
+    background: linear-gradient(145deg, rgba(135, 206, 235, 1), rgba(173, 216, 230, 1));
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+    width: 100%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Commutateur de thème */
+.theme-toggle {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Champs de saisie et bouton */
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+.weather-info {
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.weather-info p {
+    font-size: 18px;
+}
+
+.weather-info img {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    animation: slideIn 1s ease-out;
+}
+
+/* Prévisions */
+#forecast-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.forecast-item {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    width: 80px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.forecast-item p {
+    margin: 5px 0;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background: #121212;
+}
+
+.app-container.dark-mode {
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.weather-info.dark-mode p {
+    color: white;
+}
+
+.weather-info.dark-mode {
+    background-color: #2c3e50;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+button.dark-mode {
+    background-color: #1abc9c;
+}
+
+button.dark-mode:hover {
+    background-color: #16a085;
+}
+
+/* Graphiques */
+#chart-container {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Erreurs */
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 20px;
+    display: none;
+}
